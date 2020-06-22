@@ -30,7 +30,7 @@ const finalStreamFile = createWriteStream(output);
 		},
 	});
 
-
+	console.time('concat-data')
 	const files = await readdir(filesDir);
 	const streams = files
 		.map(item => createReadStream(join(filesDir, item)));
@@ -50,5 +50,6 @@ const finalStreamFile = createWriteStream(output);
 	)
 
 	console.log(`${files.length} files merged! on ${output}`);
+	console.timeEnd('concat-data')
 })()
 

@@ -1,8 +1,9 @@
 const { promises: { appendFile } } = require('fs')
-const faker = require('faker')
-const { join, resolve } = require('path')
-const flagForNotExistentFile = { flag: 'a' }
+const { join } = require('path')
+
 const debug = require('debug')('app:child')
+const faker = require('faker')
+const flagForNotExistentFile = { flag: 'a' }
 
 const populateFile = async ({ file, header, amout }) => {
     const filename = join(__dirname, '../', 'files', file)
