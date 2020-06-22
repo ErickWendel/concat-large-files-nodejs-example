@@ -1,0 +1,22 @@
+{
+  "name": "concat-large-files",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "create-files": "mkdir -p files && DEBUG=app:parent node produceData",
+    "concat-files": "DEBUG=app:concat node index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "csvtojson": "^2.0.10",
+    "debug": "^4.1.1",
+    "faker": "^4.1.0",
+    "json-to-csv": "^1.0.0",
+    "json-to-csv-stream": "^1.1.0",
+    "stream-concat": "^0.3.0"
+  }
+}
